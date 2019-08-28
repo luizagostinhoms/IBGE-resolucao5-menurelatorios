@@ -114,7 +114,7 @@ void imprimirMenuDeInformacoes() {
 void descobriCidadeComMaiorNAcidentes(int num_cidade, cidade cidades[]){
     
 
-    struct cidade cidadeMaiorAcidente; //declaramos uma cidade novamente para depois fazer o uso da mesma no resultado, isso facita caso necessitamos pegar outra informação da mesma cidade.
+    struct cidade cidadeMaiorAcidente = cidades[0]; //declaramos uma cidade novamente para depois fazer o uso da mesma no resultado, isso facita caso necessitamos pegar outra informação da mesma cidade.
     int maior_n_acidente = cidades[0].quantidade_vitimas;  //variável para guardar o valor do maior numero de acidentes, essa variável será agora apenas de controle, o resultado usarmoes a variavel cidadeMaiorAcidente acima.
     for (int i = 0; i < num_cidade; i++) {
         if(maior_n_acidente < cidades[i].quantidade_vitimas) {
@@ -137,7 +137,7 @@ void descobriCidadeComMaiorNAcidentes(int num_cidade, cidade cidades[]){
 */
 void descobriCidadeComMenorNAcidentes(int num_cidade, cidade cidades[]) {
   
-    struct cidade cidadeMenorAcidente; //declaramos uma cidade novamente para depois fazer o uso da mesma no resultado, isso facita caso necessitamos pegar outra informação da mesma cidade.
+    struct cidade cidadeMenorAcidente = cidades[0]; //declaramos uma cidade novamente para depois fazer o uso da mesma no resultado, isso facita caso necessitamos pegar outra informação da mesma cidade.
     int menor_n_acidente = cidades[0].quantidade_vitimas;  //variável para guardar o valor do menor numero de acidentes, essa variável será agora apenas de controle, o resultado usarmoes a variavel cidadeMenorAcidente acima.
     for (int i = 0; i < num_cidade; i++) {
         if(menor_n_acidente > cidades[i].quantidade_vitimas) {
